@@ -12,7 +12,7 @@
 
 #include "libftprintf.h"
 
-static	int	ft_next_check(char *s, va_list *ap)
+static	int	ft_type_check(char *s, va_list *ap)
 {
 	if (*s == 'c' || *s == 's')
 		return (ft_print_c(*ap));
@@ -37,7 +37,7 @@ int	ft_printf(const char *s, ...)
 		if (*s == '%')
 		{
 			s++;
-			count += ft_next_check(*s, &ap);
+			count += ft_type_check(*s, &ap);
 		}
 		else
 		{
