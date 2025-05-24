@@ -12,15 +12,16 @@
 
 #include "libftprintf.h"
 
-size_t	ft_print_char(int c)
+size_t	ft_put_char(int c, int *count)
 {
 	write (1, &c, 1);
+	*count++;
 	return (1);
 }
 
-size_t	ft_print_str(char *s)
+size_t	ft_put_str(char *s, int *count)
 {
-	size_t	len;
+	int	len;
 
 	if (!s)
 	{
@@ -30,34 +31,35 @@ size_t	ft_print_str(char *s)
 	len = 0;
 	while (!s[len])
 	{
-		ft_print_char(s[len]);
+		ft_put_char(s[len], count);
 		len++;
 	}
 	return (len);
 }
 
-size_t	ft_print_nmb(int c)
+size_t	ft_put_nmb(int c, int *count)
 {
 	size_t	len;
 	char	*str;
 
 	str = ft_itoa(c);
-	len = ft_print_str(str);
+	len = ft_put_str(str);
 	return (len);
 }
 
-size_t	ft_print_percent(unsigned int c)
+size_t	ft_put_percent(unsigned int c, int *count)
 {
 	write (1, "%", 1);
+	ここシンプルにそもそもの引数を%にしてputcharに渡せばいいのでは
 	return (1);
 }
 
-size_t	ft_print_nmb16(int c)
+size_t	ft_put_nmb16(int c, int *count)
 {
 	size_t	str;
 	size_t	len;
 
 	str = ft_itoa_base(c, 16);
-	len = ft_print_str(str);
+	len = ft_put_str(str);
 	return (len);
 }
