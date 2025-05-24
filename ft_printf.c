@@ -9,7 +9,8 @@
 /*   Updated: 2025-05-17 08:38:41 by ayayamad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdarg.h>
+
+#include "libftprintf.h"
 
 static	int	ft_next_check(char *s, va_list *ap)
 {
@@ -21,20 +22,6 @@ static	int	ft_next_check(char *s, va_list *ap)
 		return (ft_print_n16(*ap));
 	if (*s == '%')
 		return (ft_print_p(*ap));
-}
-
-static int	ft_print_c(va_list *ap)
-{
-	int		len;
-	char	*c;
-
-	c = (char *)va_arg(*ap, int);
-
-	if (!c)
-		return (null);
-	len = ft_strlen(c);
-	write(1, &c, len);
-	return (len);
 }
 
 int	ft_printf(const char *s, ...)
