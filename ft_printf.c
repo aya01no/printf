@@ -12,24 +12,40 @@
 
 #include "libftprintf.h"
 
-static	int	ft_type_check(char *s, va_list *ap)
+static	size_t	ft_type_check(char *s, va_list *ap, int *count)
 {
-	if (*s == 'c' || *s == 's')
-		return (ft_print_c(*ap));
-	if (*s == 'd' || *s == 'i' || *s == 'u')
-		return (ft_print_nmb(*ap));
-	if (*s == 'x' || *s == 'X' || *s == 'p')
-		return (ft_print_n16(*ap));
+	int	is_upper;
+
+	if (*s == 'c')
+		return (ft_put_char(va_arg(*ap, int), count));
+	if (*s == 's')
+		return (ft_put_str(va_arg(*ap, char *), count));
+	if (*s == 'd' || *s == 'i')
+		return (ft_put_nbr(*ap, count));
+	if (*s == 'u')
+		return (ft_put_signed_nbr(va_arg(*ap, int), count));
+	if (*s == 'x')
+	{
+		is_upper = 0;
+		return (ft_put_nbr_hex(va_arg(*ap, unsigned int), count, is_upper));
+	}
+	if (*s == 'x')
+	{
+		is_upper = 1;
+		return (ft_put_nbr_hex(va_arg(*ap, unsigned int), count, is_upper));
+	}
 	if (*s == '%')
-		return (ft_print_p(*ap));
+		return (ft_put_char('%', count));
+	if (*s == 'p')
+		return (ft_put_ptr(va_arg(*ap, void *), count));
+	return (0);
 }
 
 int	ft_printf(const char *s, ...)
 {
-	int		count;
+	int		*count;
 	va_list	ap;
 	int		args;
-
 	va_start(ap, *s);
 	count = 0;
 	while (*s)
@@ -37,7 +53,7 @@ int	ft_printf(const char *s, ...)
 		if (*s == '%')
 		{
 			s++;
-			count += ft_type_check(*s, &ap);
+			count += ft_type_check(*s, &ap, count);
 		}
 		else
 		{
