@@ -26,9 +26,9 @@ size_t	ft_put_nbr_hex(unsigned int c, size_t len, int is_upper)
 	if (digit < 10)
 		hex_int = digit + '0';
 	else if (is_upper)
-			hex_int = digit - 10 + 'A';
-		else
-			hex_int = digit - 10 + 'a';
+		hex_int = digit - 10 + 'A';
+	else
+		hex_int = digit - 10 + 'a';
 	len += ft_put_char(hex_int);
 	return (len);
 }
