@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayayamad <ayayamad@student.42tokyo.jp>     #+#  +:+       +#+        */
+/*   By: ayayamad <ayayamad@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-05-28 05:00:14 by ayayamad          #+#    #+#             */
-/*   Updated: 2025-05-28 05:00:14 by ayayamad         ###   ########.fr       */
+/*   Created: 2025/05/24 05:40:23 by ayayamad          #+#    #+#             */
+/*   Updated: 2025/05/28 14:04:07 by ayayamad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

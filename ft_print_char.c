@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayayamad <ayayamad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayayamad <ayayamad@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 13:05:46 by ayayamad          #+#    #+#             */
-/*   Updated: 2025/05/26 22:04:52 by ayayamad         ###   ########.fr       */
+/*   Created: 2025/05/28 14:03:03 by ayayamad          #+#    #+#             */
+/*   Updated: 2025/05/28 14:04:35 by ayayamad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include "libftprintf.h"
 
