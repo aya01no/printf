@@ -14,23 +14,20 @@
 
 #include "libftprintf.h"
 
-size_t	ft_put_char(int c, size_t len)
+size_t	ft_put_char(int c)
 {
 	write (1, &c, 1);
 	return (1);
 }
 
-size_t	ft_put_str(char *s, size_t len)
+size_t	ft_put_str(char *s)
 {
-	size_t	len;
+	size_t	count;
 
 	if (!s)
 		ft_put_str("(null)");
-	len = 0;
-	while (s[len])
-	{
-		ft_put_char(s[len]);
-		len++;
-	}
-	return (len);
+	count = 0;
+	while (*s)
+		count += ft_put_char(*s++);
+	return (count);
 }
