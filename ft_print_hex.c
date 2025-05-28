@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kurimaru <kurimaru@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayayamad <ayayamad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 06:11:24 by ayayamad          #+#    #+#             */
-/*   Updated: 2025/05/26 22:07:18 by kurimaru         ###   ########.fr       */
+/*   Updated: 2025/05/26 22:07:18 by ayayamad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-size_t	ft_put_nbr_hex(unsigned int c, int is_upper)
+size_t	ft_put_nbr_hex(unsigned int c, size_t len, int is_upper)
 {
 	int		digit;
 	int		hex_int;

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kurimaru <kurimaru@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayayamad <ayayamad@student.42tokyo.jp>     #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/24 05:40:23 by ayayamad          #+#    #+#             */
-/*   Updated: 2025/05/26 22:08:52 by kurimaru         ###   ########.fr       */
+/*   Created: 2025-05-28 05:00:14 by ayayamad          #+#    #+#             */
+/*   Updated: 2025-05-28 05:00:14 by ayayamad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 
 #ifndef LIBFTPRINTF_H

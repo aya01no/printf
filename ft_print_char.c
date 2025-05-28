@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kurimaru <kurimaru@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayayamad <ayayamad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:05:46 by ayayamad          #+#    #+#             */
-/*   Updated: 2025/05/26 22:04:52 by kurimaru         ###   ########.fr       */
+/*   Updated: 2025/05/26 22:04:52 by ayayamad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-size_t	ft_put_char(int c)
+size_t	ft_put_char(int c, size_t len)
 {
 	write (1, &c, 1);
 	return (1);
 }
 
-size_t	ft_put_str(char *s)
+size_t	ft_put_str(char *s, size_t len)
 {
 	size_t	len;
 
