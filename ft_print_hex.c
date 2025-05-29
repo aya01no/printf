@@ -12,15 +12,15 @@
 
 #include "libftprintf.h"
 
-size_t	ft_put_nbr_hex(unsigned int c, size_t len, int is_upper)
+size_t	ft_put_nbr_hex(unsigned int c, int is_upper)
 {
 	int		digit;
 	int		hex_int;
-	size_t	len;
+	size_t	count;
 
-	len = 0;
+	count = 0;
 	if (c >= 16)
-		len += ft_put_nbr_hex((c / 16), is_upper);
+		count += ft_put_nbr_hex((c / 16), is_upper);
 
 	digit = c % 16;
 	if (digit < 10)
@@ -29,6 +29,6 @@ size_t	ft_put_nbr_hex(unsigned int c, size_t len, int is_upper)
 		hex_int = digit - 10 + 'A';
 	else
 		hex_int = digit - 10 + 'a';
-	len += ft_put_char(hex_int);
-	return (len);
+	count += ft_put_char(hex_int);
+	return (count);
 }

@@ -16,12 +16,12 @@ size_t	ft_put_ptr(void *c)
 {
 	uintptr_t	ptr_c;
 	int			is_upper;
-	size_t		len;
+	size_t		count;
 
 	ptr_c = (uintptr_t)c;
-	len = 0;
-	len += ft_put_str("0x");
+	count = 0;
+	count += ft_put_str("0x");
 	is_upper = 0;
-	len += ft_put_nbr_hex(ptr_c, is_upper);
-	return (len);
+	count += ft_put_nbr_hex(ptr_c, is_upper);
+	return (count);
 }

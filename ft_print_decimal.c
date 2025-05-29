@@ -14,27 +14,27 @@
 
 size_t	ft_put_signed_nbr(int c)
 {
-	size_t	len;
+	size_t	count;
 
-	len = 0;
+	count = 0;
 	if (c < 0)
 	{
-		len += ft_put_char('-');
+		count += ft_put_char('-');
 		c = -c;
 	}
 	if (c >= 10)
-		len += ft_put_signed_nbr((c / 10));
-	len = len + ft_put_char((c % 10) + '0');
-	return (len);
+		count += ft_put_signed_nbr((c / 10));
+	count = count + ft_put_char((c % 10) + '0');
+	return (count);
 }
 
 size_t	ft_put_unsigned_nbr(unsigned int c)
 {
-	size_t	len;
+	size_t	count;
 
-	len = 0;
+	count = 0;
 	if (c >= 10)
-		len += ft_put_unsigned_nbr((c / 10));
-	len += ft_put_char((c % 10) + '0');
-	return (len);
+		count += ft_put_unsigned_nbr((c / 10));
+	count += ft_put_char((c % 10) + '0');
+	return (count);
 }
