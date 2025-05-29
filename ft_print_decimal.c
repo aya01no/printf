@@ -24,7 +24,7 @@ size_t	ft_put_signed_nbr(int c)
 	}
 	if (c >= 10)
 		count += ft_put_signed_nbr((c / 10));
-	count = count + ft_put_char((c % 10) + '0');
+	count += ft_put_char((c % 10) + '0');
 	return (count);
 }
 

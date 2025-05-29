@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <stdint.h>
+# include <limits.h>
 
 size_t	ft_put_char(int c);
 size_t	ft_put_str(char *s);

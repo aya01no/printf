@@ -18,7 +18,8 @@ RM         := rm -f
 
 # mandatory
 SRCS := \
-	ft_printf.c
+	ft_printf.c ft_print_char.c ft_print_decimal.c ft_print_hex.c \
+	ft_print_ptr.c 
 
 
 OBJS := $(SRCS:.c=.o)

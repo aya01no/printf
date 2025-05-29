@@ -26,7 +26,7 @@ static	size_t	ft_type_check(char *s, va_list *ap)
 		return (ft_put_unsigned_nbr(va_arg(*ap, unsigned int)));
 	if (*s == 'x' || *s == 'X')
 	{
-		is_upper = (*s == 'x');
+		is_upper = (*s == 'X');
 		return (ft_put_nbr_hex(va_arg(*ap, unsigned int), is_upper));
 	}
 	if (*s == '%')

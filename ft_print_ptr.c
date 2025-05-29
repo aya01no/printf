@@ -14,11 +14,11 @@
 
 size_t	ft_put_ptr(void *c)
 {
-	uintptr_t	ptr_c;
-	int			is_upper;
-	size_t		count;
+	unsigned long long	ptr_c;
+	int					is_upper;
+	size_t				count;
 
-	ptr_c = (uintptr_t)c;
+	ptr_c = (unsigned long long)c;
 	count = 0;
 	count += ft_put_str("0x");
 	is_upper = 0;

@@ -23,7 +23,7 @@ size_t	ft_put_str(char *s)
 	size_t	count;
 
 	if (!s)
-		ft_put_str("(null)");
+		return (ft_put_str("(null)"));
 	count = 0;
 	while (*s)
 		count += ft_put_char(*s++);
