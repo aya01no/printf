@@ -21,17 +21,12 @@ static	size_t	ft_type_check(char *s, va_list *ap)
 	if (*s == 's')
 		return (ft_put_str(va_arg(*ap, char *)));
 	if (*s == 'd' || *s == 'i')
-		return (ft_put_nbr(*ap, int));
-	if (*s == 'u')
 		return (ft_put_signed_nbr(va_arg(*ap, int)));
-	if (*s == 'x')
+	if (*s == 'u')
+		return (ft_put_unsigned_nbr(va_arg(*ap, unsigned int)));
+	if (*s == 'x' || *s == 'X')
 	{
-		is_upper = 0;
-		return (ft_put_nbr_hex(va_arg(*ap, unsigned int), is_upper));
-	}
-	if (*s == 'x')
-	{
-		is_upper = 1;
+		is_upper = (*s == 'x');
 		return (ft_put_nbr_hex(va_arg(*ap, unsigned int), is_upper));
 	}
 	if (*s == '%')
@@ -51,9 +46,10 @@ int	ft_printf(const char *s, ...)
 	count = 0;
 	while (*s)
 	{
-		if (*s == '%')
+		if (*s == '%' && *(s + 1))
 		{
-			count = ft_type_check(*s++, &ap);
+			s++;
+			count += ft_type_check((char *)s, &ap);
 		}
 		else
 		{
