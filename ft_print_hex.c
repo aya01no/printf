@@ -21,7 +21,6 @@ size_t	ft_put_nbr_hex(unsigned int c, int is_upper)
 	count = 0;
 	if (c >= 16)
 		count += ft_put_nbr_hex((c / 16), is_upper);
-
 	digit = c % 16;
 	if (digit < 10)
 		hex_int = digit + '0';

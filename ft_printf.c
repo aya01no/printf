@@ -40,7 +40,6 @@ int	ft_printf(const char *s, ...)
 {
 	size_t		count;
 	va_list		ap;
-	int			args;
 
 	va_start(ap, *s);
 	count = 0;
