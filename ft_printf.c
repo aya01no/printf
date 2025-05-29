@@ -41,7 +41,7 @@ int	ft_printf(const char *s, ...)
 	size_t		count;
 	va_list		ap;
 
-	va_start(ap, *s);
+	va_start(ap, s);
 	count = 0;
 	while (*s)
 	{
