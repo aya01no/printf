@@ -25,4 +25,5 @@ size_t	ft_put_unsigned_nbr(unsigned int c);
 size_t	ft_put_nbr_hex(unsigned int c, int is_upper);
 size_t	ft_put_percent(unsigned int c);
 size_t	ft_put_ptr(void *c);
+int		ft_printf(const char *s, ...);
 #endif
