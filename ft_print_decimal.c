@@ -15,16 +15,18 @@
 size_t	ft_put_signed_nbr(int c)
 {
 	size_t	count;
+	long	n;
 
+	n = (long)c;
 	count = 0;
-	if (c < 0)
+	if (n < 0)
 	{
 		count += ft_put_char('-');
-		c = -c;
+		n = -n;
 	}
-	if (c >= 10)
-		count += ft_put_signed_nbr((c / 10));
-	count += ft_put_char((c % 10) + '0');
+	if (n >= 10)
+		count += ft_put_signed_nbr((n / 10));
+	count += ft_put_char((n % 10) + '0');
 	return (count);
 }
 
