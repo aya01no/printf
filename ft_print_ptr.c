@@ -12,16 +12,34 @@
 
 #include "ft_printf.h"
 
+static size_t	ft_put_nbr_hex_uintptr(uintptr_t c)
+{
+	uintptr_t	digit;
+	char		hex_int;
+	size_t		count;
+
+	count = 0;
+	if (c >= 16)
+		count += ft_put_nbr_hex_uintptr((c / 16));
+	digit = c % 16;
+	if (digit < 10)
+		hex_int = digit + '0';
+	else
+		hex_int = digit - 10 + 'a';
+	count += ft_put_char(hex_int);
+	return (count);
+}
+
 size_t	ft_put_ptr(void *c)
 {
-	unsigned long long	ptr_c;
-	int					is_upper;
-	size_t				count;
+	uintptr_t	ptr_c;
+	size_t		count;
 
-	ptr_c = (unsigned long long)c;
+	if (c == NULL)
+		return (ft_put_str("(nil)"));
+	ptr_c = (uintptr_t)c;
 	count = 0;
 	count += ft_put_str("0x");
-	is_upper = 0;
-	count += ft_put_nbr_hex(ptr_c, is_upper);
+	count += ft_put_nbr_hex_uintptr(ptr_c);
 	return (count);
 }
