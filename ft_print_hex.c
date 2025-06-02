@@ -14,9 +14,9 @@
 
 size_t	ft_put_nbr_hex(unsigned int c, int is_upper)
 {
-	unsigned int	digit;
-	unsigned int	hex_int;
-	size_t			count;
+	char	digit;
+	int		hex_int;
+	size_t	count;
 
 	count = 0;
 	if (c >= 16)
