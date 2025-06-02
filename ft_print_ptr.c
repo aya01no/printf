@@ -15,7 +15,7 @@
 static size_t	ft_put_nbr_hex_uintptr(uintptr_t c)
 {
 	uintptr_t	digit;
-	char		hex_int;
+	char		hex_char;
 	size_t		count;
 
 	count = 0;
@@ -23,10 +23,10 @@ static size_t	ft_put_nbr_hex_uintptr(uintptr_t c)
 		count += ft_put_nbr_hex_uintptr((c / 16));
 	digit = c % 16;
 	if (digit < 10)
-		hex_int = digit + '0';
+		hex_char = digit + '0';
 	else
-		hex_int = digit - 10 + 'a';
-	count += ft_put_char(hex_int);
+		hex_char = digit - 10 + 'a';
+	count += ft_put_char(hex_char);
 	return (count);
 }
 
