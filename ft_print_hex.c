@@ -12,11 +12,11 @@
 
 #include "ft_printf.h"
 
-size_t	ft_put_nbr_hex(unsigned int c, int is_upper)
+int	ft_put_nbr_hex(unsigned int c, int is_upper)
 {
 	char	digit;
 	int		hex_int;
-	size_t	count;
+	int		count;
 
 	count = 0;
 	if (c >= 16)

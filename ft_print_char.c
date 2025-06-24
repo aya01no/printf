@@ -12,15 +12,15 @@
 
 #include "ft_printf.h"
 
-size_t	ft_put_char(int c)
+int	ft_put_char(int c)
 {
 	write (1, &c, 1);
 	return (1);
 }
 
-size_t	ft_put_str(char *s)
+int	ft_put_str(char *s)
 {
-	size_t	count;
+	int	count;
 
 	if (!s)
 		return (ft_put_str("(null)"));

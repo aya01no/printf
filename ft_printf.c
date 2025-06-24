@@ -38,7 +38,7 @@ static	size_t	ft_type_check(char *s, va_list *ap)
 
 int	ft_printf(const char *s, ...)
 {
-	size_t		count;
+	int			count;
 	va_list		ap;
 
 	va_start(ap, s);

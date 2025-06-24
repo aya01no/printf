@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-size_t	ft_put_signed_nbr(int c)
+int	ft_put_signed_nbr(int c)
 {
-	size_t	count;
+	int		count;
 	long	n;
 
 	n = (long)c;
@@ -30,9 +30,9 @@ size_t	ft_put_signed_nbr(int c)
 	return (count);
 }
 
-size_t	ft_put_unsigned_nbr(unsigned int c)
+int	ft_put_unsigned_nbr(unsigned int c)
 {
-	size_t	count;
+	int	count;
 
 	count = 0;
 	if (c >= 10)

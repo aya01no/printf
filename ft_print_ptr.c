@@ -12,11 +12,11 @@
 
 #include "ft_printf.h"
 
-static size_t	ft_put_nbr_hex_uintptr(uintptr_t c)
+static int	ft_put_nbr_hex_uintptr(uintptr_t c)
 {
 	uintptr_t	digit;
 	char		hex_char;
-	size_t		count;
+	int			count;
 
 	count = 0;
 	if (c >= 16)
@@ -30,10 +30,10 @@ static size_t	ft_put_nbr_hex_uintptr(uintptr_t c)
 	return (count);
 }
 
-size_t	ft_put_ptr(void *c)
+int	ft_put_ptr(void *c)
 {
 	uintptr_t	ptr_c;
-	size_t		count;
+	int			count;
 
 	if (c == NULL)
 		return (ft_put_str("(nil)"));

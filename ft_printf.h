@@ -19,12 +19,12 @@
 # include <stdint.h>
 # include <limits.h>
 
-size_t	ft_put_char(int c);
-size_t	ft_put_str(char *s);
-size_t	ft_put_signed_nbr(int c);
-size_t	ft_put_unsigned_nbr(unsigned int c);
-size_t	ft_put_nbr_hex(unsigned int c, int is_upper);
-size_t	ft_put_percent(unsigned int c);
-size_t	ft_put_ptr(void *c);
-int		ft_printf(const char *s, ...);
+int	ft_put_char(int c);
+int	ft_put_str(char *s);
+int	ft_put_signed_nbr(int c);
+int	ft_put_unsigned_nbr(unsigned int c);
+int	ft_put_nbr_hex(unsigned int c, int is_upper);
+int	ft_put_percent(unsigned int c);
+int	ft_put_ptr(void *c);
+int	ft_printf(const char *s, ...);
 #endif
