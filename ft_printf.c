@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static	size_t	ft_type_check(char *s, va_list *ap)
+static	size_t	ft_type_check(const char *s, va_list *ap)
 {
 	int	is_upper;
 
