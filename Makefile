@@ -19,8 +19,7 @@ RM         := rm -f
 # mandatory
 SRCS := \
 	ft_printf.c ft_print_char.c ft_print_decimal.c ft_print_hex.c \
-	ft_print_ptr.c 
-
+	ft_print_ptr.c
 
 OBJS := $(SRCS:.c=.o)
 
@@ -28,11 +27,11 @@ OBJS := $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
-
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
