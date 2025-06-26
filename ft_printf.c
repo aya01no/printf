@@ -12,26 +12,26 @@
 
 #include "ft_printf.h"
 
-static	size_t	ft_type_check(const char *s, va_list *ap)
+static	size_t	ft_type_check(const char *format, va_list *ap)
 {
 	int	is_upper;
 
-	if (*s == 'c')
+	if (*format == 'c')
 		return (ft_put_char(va_arg(*ap, int)));
-	if (*s == 's')
+	if (*format == 's')
 		return (ft_put_str(va_arg(*ap, char *)));
-	if (*s == 'd' || *s == 'i')
+	if (*format == 'd' || *format == 'i')
 		return (ft_put_signed_nbr(va_arg(*ap, int)));
-	if (*s == 'u')
+	if (*format == 'u')
 		return (ft_put_unsigned_nbr(va_arg(*ap, unsigned int)));
-	if (*s == 'x' || *s == 'X')
+	if (*format == 'x' || *format == 'X')
 	{
-		is_upper = (*s == 'X');
+		is_upper = (*format == 'X');
 		return (ft_put_nbr_hex(va_arg(*ap, unsigned int), is_upper));
 	}
-	if (*s == '%')
+	if (*format == '%')
 		return (ft_put_char('%'));
-	if (*s == 'p')
+	if (*format == 'p')
 		return (ft_put_ptr(va_arg(*ap, void *)));
 	return (0);
 }
